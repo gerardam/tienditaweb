@@ -1,0 +1,96 @@
+﻿body {
+    background: #fafafa;
+    min-height: 100%;
+}
+
+div.row{
+    margin-bottom: 0;
+}
+/*============Div Grid==============*/
+#Grid {
+    height: 360px;
+    overflow: auto;
+}
+
+.ColumnaOculta {
+    display: none;
+}
+
+.hide {
+    display: none;
+}
+/*Diseño de material*/
+.material-icons.md-18 {
+    font-size: 18px;
+}
+
+.material-icons.md-24 {
+    font-size: 24px;
+}
+
+.material-icons.md-36 {
+    font-size: 36px;
+}
+
+.material-icons.md-48 {
+    font-size: 48px;
+}
+
+.Contenido {
+    min-height:730px;
+    height: 100%;
+}
+
+h1 {
+    color: #01579b;
+    font-weight: bold;
+}
+
+.significado {
+    font-size: .9em;
+    color: #9e9e9e;
+}
+
+footer .container .row .col .buginclog {
+    width: 200px;
+}
+
+.input-field input[type=text], .switch label {
+    color: #333;
+}
+
+    .input-field input[type=text][readonly="readonly"], .input-field input[type=text]:disabled, .input-field textarea.materialize-textarea:disabled, .input-field textarea.materialize-textarea[readonly="readonly"] {
+        color: #333;
+    }
+
+label span {
+    color: #666;
+}
+
+/* label color */
+.input-field label {
+    color: #000;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label {
+    color: #000;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid #01579b;
+    box-shadow: 0 1px 0 0 #01579b;
+}
+/* valid color */
+.input-field input[type=text].valid {
+    border-bottom: 1px solid #4caf50;
+    box-shadow: 0 1px 0 0 #4caf50;
+}
+/* invalid color */
+.input-field input[type=text].invalid {
+    border-bottom: 1px solid #d50000;
+    box-shadow: 0 1px 0 0 #d50000;
+}
+/* icon prefix focus color */
+.input-field .prefix.active {
+    color: #01579b;
+}

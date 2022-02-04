@@ -1,0 +1,127 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SI_00.Master.cs" Inherits="VentasCal.SI_00" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>Tienda</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="~/css/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/jquery-ui.theme.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/jquery-ui.structure.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/materialize.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="shortcut icon" href="_Imagenes/favicon.png" />
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager ID="smrTemplate" ScriptMode="Release" AsyncPostBackTimeout="360000" EnablePageMethods="true" runat="server">
+            <Scripts>
+                <asp:ScriptReference Path="~/_Scripts/page/ValidationCamp.js" />
+                <asp:ScriptReference Path="~/_Scripts/jquery-2.1.4.min.js" />
+                <asp:ScriptReference Path="~/_Scripts/jquery.validate.js" />
+                <asp:ScriptReference Path="~/_Scripts/jquery.ui.datepicker.js" />
+                <asp:ScriptReference Path="~/_Scripts/jquery-ui.interactions.1.11.4.js" />
+                <asp:ScriptReference Path="~/_Scripts/page/SI_00.js" />
+                <asp:ScriptReference Path="~/_Scripts/materialize.min.js" />
+            </Scripts>
+        </asp:ScriptManager>
+
+        <div id="divNavbar" class="navbar-fixed">
+            <nav>
+                <div class="nav-wrapper grey darken-3 white-text">
+                    <a href="#" class="logoBug brand-logo right">Tienda</a>
+                    <a class="button-collapse" href="#" data-activates="nav-mobile">
+                        <i class="mdi-navigation-menu"></i>
+                    </a>
+                    <ul class="left hide-on-med-and-down white-text">
+                        <li>
+                            <asp:HyperLink ID="hplHome" runat="server" NavigateUrl="~/admin"><i class="material-icons md-36">home</i></asp:HyperLink>
+                        </li>
+                        <li>
+                            <asp:HyperLink ID="hplProductos" runat="server" NavigateUrl="~/producto"><span>Productos</span></asp:HyperLink>
+                        </li>
+                        <li>
+                            <asp:HyperLink ID="hplVentas" runat="server" NavigateUrl="~/venta"><span>Ventas</span></asp:HyperLink>
+                        </li>
+                        <li>
+                            <asp:HyperLink ID="hplPerfils" runat="server" NavigateUrl="~/perfil"><i class="material-icons md-36">person</i></asp:HyperLink>
+                        </li>
+                        <li>
+                            <asp:HyperLink ID="hplUsuarios" runat="server" NavigateUrl="~/usuario"><span><i class="material-icons md-36">person_add</i></span></asp:HyperLink>
+                        </li>
+                        <li>
+                            <asp:LinkButton ID="lnkLogin" runat="server" OnClick="lnkInicio_Click">Login</asp:LinkButton>
+                        </li>
+                        <li>
+                            <asp:LinkButton ID="lnkLogout" runat="server" OnClick="lnkSalir_Click"><i class="material-icons md-36">exit_to_app</i></asp:LinkButton>
+                        </li>
+                    </ul>
+                    <ul class="left side-nav grey lighten-3" id="nav-mobile">
+                        <li>
+                            <asp:HyperLink ID="hplInicio" runat="server" NavigateUrl="~/admin"><span><i class="material-icons left">home</i>Inicio</span></asp:HyperLink>
+                        </li>
+                        <li>
+                            <asp:HyperLink ID="hplProducto" runat="server" NavigateUrl="~/producto"><span><i class="material-icons left">assignment</i>Productos</span></asp:HyperLink>
+                        </li>
+                        <li>
+                            <asp:HyperLink ID="hplVenta" runat="server" NavigateUrl="~/venta"><span><i class="material-icons left">shopping_cart</i>Ventas</span></asp:HyperLink>
+                        </li>
+                        <li>
+                            <asp:HyperLink ID="hplPerfil" runat="server" NavigateUrl="~/perfil"><span><i class="material-icons left">person</i>Perfil</span></asp:HyperLink>
+                        </li>
+                        <li>
+                            <asp:HyperLink ID="hplUsuario" runat="server" NavigateUrl="~/usuario"><span><i class="material-icons left">person_add</i>Registrar</span></asp:HyperLink>
+                        </li>
+                        <li>
+                            <asp:LinkButton ID="lnkInicio" runat="server" OnClick="lnkInicio_Click"><i class="material-icons left">account_box</i>Login</asp:LinkButton>
+                        </li>
+                        <li>
+                            <asp:LinkButton ID="lnkSalir" runat="server" OnClick="lnkSalir_Click"><i class="material-icons left">exit_to_app</i>Salir</asp:LinkButton>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div id="modalInicio" class="modal modal-fixed-footer" style="max-width: 450px; max-height: 400px; min-width: 300px; min-height: 350px;">
+            <div class="modal-content validationGroupLogin">
+                <h4 class="center-align">Iniciar sesion</h4>
+                <div class="col s12 center-align">
+                    <div class="input-field">
+                        <i class="material-icons prefix">perm_identity</i>
+                        <label for="Email" data-error="wrong" data-success="right">
+                            <asp:Label runat="server" for="Email">E-mail</asp:Label></label>
+                        <asp:TextBox runat="server" TextMode="Email" class="validate" name="txtEmail" ID="txtEmail"></asp:TextBox>
+                    </div>
+                    <div class="input-field">
+                        <i class="material-icons prefix">lock_outline</i>
+                        <label for="Password" data-error="wrong" data-success="right">
+                            <asp:Label runat="server" for="Password">Contraseña</asp:Label></label>
+                        <asp:TextBox runat="server" TextMode="Password" class="validate" name="txtPassword" ID="txtPassword"></asp:TextBox>
+                    </div>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <asp:LinkButton ID="lnkAceptarInicio" class="btn waves-effect waves-light amber darken-4" runat="server" OnClick="lnkAceptarInicio_Click"><i class="material-icons md-36 left">lock_open</i>Entrar</asp:LinkButton>
+            </div>
+        </div>
+
+        <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+        </asp:ContentPlaceHolder>
+
+        <div class="container Contenido">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div>
+
+        <footer class="page-footer grey darken-4 white-text" style="padding-top: 0;">
+            <div class="footer-copyright">
+                <div class="container center-align">
+                    <span>Gerardo Alvarez <span class="Mreg">&reg;</span>. Todos los derechos reservados. 2020</span>
+                </div>
+            </div>
+        </footer>
+    </form>
+</body>
+</html>

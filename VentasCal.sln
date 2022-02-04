@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28917.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentacion", "VentasCal\Presentacion.csproj", "{890E4777-C446-440D-ABEE-2B2585631ABF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Datos", "Datos\Datos.csproj", "{B95C7662-F09C-459E-A53B-7D8EE4D5956E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Negocio", "Presentacion\Negocio.csproj", "{2193C253-459B-4E9B-A347-877523DB39BF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{890E4777-C446-440D-ABEE-2B2585631ABF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{890E4777-C446-440D-ABEE-2B2585631ABF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{890E4777-C446-440D-ABEE-2B2585631ABF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{890E4777-C446-440D-ABEE-2B2585631ABF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{890E4777-C446-440D-ABEE-2B2585631ABF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B95C7662-F09C-459E-A53B-7D8EE4D5956E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B95C7662-F09C-459E-A53B-7D8EE4D5956E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B95C7662-F09C-459E-A53B-7D8EE4D5956E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{B95C7662-F09C-459E-A53B-7D8EE4D5956E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B95C7662-F09C-459E-A53B-7D8EE4D5956E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B95C7662-F09C-459E-A53B-7D8EE4D5956E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{2193C253-459B-4E9B-A347-877523DB39BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2193C253-459B-4E9B-A347-877523DB39BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2193C253-459B-4E9B-A347-877523DB39BF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{2193C253-459B-4E9B-A347-877523DB39BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2193C253-459B-4E9B-A347-877523DB39BF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7FF9EFCB-9371-4513-85EC-502ACEDDD300}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://dev.azure.com/gerardam
+		SccProjectUniqueName0 = Datos\\Datos.csproj
+		SccProjectName0 = Datos
+		SccLocalPath0 = Datos
+		SccProjectUniqueName1 = Presentacion\\Negocio.csproj
+		SccProjectName1 = Presentacion
+		SccLocalPath1 = Presentacion
+		SccProjectUniqueName2 = VentasCal\\Presentacion.csproj
+		SccProjectName2 = VentasCal
+		SccLocalPath2 = VentasCal
+		SccLocalPath3 = .
+	EndGlobalSection
+EndGlobal
